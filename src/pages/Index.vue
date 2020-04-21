@@ -15,10 +15,8 @@
           v-ripple
           v-for="menu in menus"
           :key="menu.name"
-          @mouseover="menu.menuOver = true"
-          @mouseleave="menu.menuOver = false"
           class="bg-white q-pa-xs item-menu"
-          :style="`width: ${menu.menuOver ? 130 : 32}px`"
+          :style="`width: ${!$q.platform.is.mobile ? 130 : 32}px`"
           @click="scrollToElement(menu.name)">
           <q-item-section avatar>
             <q-icon :name="menu.icon" />

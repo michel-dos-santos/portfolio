@@ -1,11 +1,11 @@
 const initialState = {
   menus: [
-    { name: 'home', label: 'Home', icon: 'inbox', link: '#home', menuOver: false },
-    { name: 'about', label: 'About', icon: 'inbox', link: '#about', menuOver: false },
-    { name: 'services', label: 'Services', icon: 'inbox', link: '#services', menuOver: false },
-    { name: 'portfolio', label: 'Portfolio', icon: 'inbox', link: '#portfolio', menuOver: false },
-    { name: 'blog', label: 'Blog', icon: 'inbox', link: '#blog', menuOver: false },
-    { name: 'contact', label: 'Contact', icon: 'inbox', link: '#contact', menuOver: false }
+    { name: 'home', label: 'Home', icon: 'inbox', link: '#home' },
+    { name: 'about', label: 'About', icon: 'inbox', link: '#about' },
+    { name: 'services', label: 'Services', icon: 'inbox', link: '#services' },
+    { name: 'portfolio', label: 'Portfolio', icon: 'inbox', link: '#portfolio' },
+    { name: 'blog', label: 'Blog', icon: 'inbox', link: '#blog' },
+    { name: 'contact', label: 'Contact', icon: 'inbox', link: '#contact' }
   ],
   miniState: true
 }
