@@ -4,7 +4,7 @@ const initialState = {
     { name: 'about', label: 'About', icon: 'inbox', link: '#about' },
     { name: 'services', label: 'Services', icon: 'inbox', link: '#services' },
     { name: 'portfolio', label: 'Portfolio', icon: 'inbox', link: '#portfolio' },
-    { name: 'blog', label: 'Blog', icon: 'inbox', link: '#blog' },
+    // { name: 'blog', label: 'Blog', icon: 'inbox', link: '#blog' },
     { name: 'contact', label: 'Contact', icon: 'inbox', link: '#contact' }
   ],
   miniState: true
@@ -26,11 +26,11 @@ export default {
     GET_PORTFOLIO: (state) => {
       return state.menus[3].name
     },
-    GET_BLOG: (state) => {
-      return state.menus[4].name
-    },
+    // GET_BLOG: (state) => {
+    // return state.menus[4].name
+    // },
     GET_CONTACT: (state) => {
-      return state.menus[5].name
+      return state.menus[4].name
     }
   },
   mutations: {

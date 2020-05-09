@@ -1,5 +1,6 @@
 <template>
   <q-page padding class="background">
+    <q-scroll-area style="height: 100vh; width: 100vw">
     <q-drawer
       show-if-above
       :mini="menuOver"
@@ -45,13 +46,14 @@
       <portfolio />
     </section>
 
-    <section :id="blog">
+    <!--section :id="blog">
       <blog />
-    </section>
+    </section-->
 
     <section :id="contact">
       <contact />
     </section>
+    </q-scroll-area>
   </q-page>
 </template>
 
@@ -60,7 +62,7 @@ import Home from '../components/Home'
 import About from '../components/About'
 import Services from '../components/Services'
 import Portfolio from '../components/Portfolio'
-import Blog from '../components/Blog'
+// import Blog from '../components/Blog'
 import Contact from '../components/Contact'
 import { scroll } from 'quasar'
 const { getScrollTarget, setScrollPosition } = scroll
@@ -71,7 +73,7 @@ export default {
     about: About,
     services: Services,
     portfolio: Portfolio,
-    blog: Blog,
+    // blog: Blog,
     contact: Contact
   },
   data () {
@@ -131,8 +133,8 @@ export default {
 <style lang="sass">
   .background
     background-image: url('~assets/ImageBackground.jpg')
-    background-attachment: scroll
-    background-size: auto
+    height: 100vh
+    background-size: cover
   .q-drawer
     position: fixed
     top: 30vh

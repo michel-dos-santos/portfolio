@@ -1,10 +1,8 @@
 <template>
-  <div class="text-h6 text-white">BLOG
-        <p v-for="n in 15" :key="n">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium molestias a adipisci,
-      dolore vitae odit, quidem consequatur optio voluptates asperiores pariatur eos numquam rerum delectus
-      commodi perferendis voluptate?
-    </p>
+  <div class="container text-h6 text-white" :style="`padding: 50px ${!$q.platform.is.mobile ? 150 : 50}px`">
+    <p class="text-h1 text-orange">Blog</p>
+    <p class="text-h5 text-italic text-orange">Bora ficar antenado sobre Programação</p>
+    <br>
   </div>
 </template>
 
@@ -20,4 +18,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .container
+    background-color: rgba(102, 172, 159, 0.3)
 </style>
