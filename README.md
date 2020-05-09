@@ -1,6 +1,6 @@
 <p align="center">
     <a href="" rel="noopener">
-        <img width=250px height=250px src="https://raw.githubusercontent.com/michel-dos-santos/portfolio/master/src/assets/logo.png?token=ABHZ6MHLNHNEKISKXETW5VS6W3XQ4" alt="Portfolio logo">
+        <img width=250px height=250px src="./src/assets/logo.png" alt="Portfolio logo">
     </a>
 </p>
 
@@ -27,6 +27,10 @@ Neste projeto conto resumidamente a minha história neste mundo imenso da tecnol
 Conta também minhas principais especializações, meus portfolios e deixo também o meu contato para caso alguém queira me contratar e saber maiores informações.
 
 Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o resultado do Meu Portfolio
+
+<p align="center">
+    <img src="./src/assets/Portfolio.gif" alt="Portfolio logo">
+</p>    
 
 ## Tecnologias utilizadas <a name = "built_using"></a>
 - [VueJS](https://vuejs.org/) - JavaScript Framework
