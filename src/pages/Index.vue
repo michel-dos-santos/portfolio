@@ -17,7 +17,7 @@
           v-for="menu in menus"
           :key="menu.name"
           class="bg-white q-pa-xs item-menu"
-          :style="`width: ${!$q.platform.is.mobile ? 130 : 32}px`"
+          :style="`width: ${!$q.platform.is.mobile ? 130 : 32}px;`"
           @click="scrollToElement(menu.name)">
           <q-item-section avatar>
             <q-icon :name="menu.icon" />
@@ -140,6 +140,7 @@ export default {
     top: 30vh
     bottom: 0
     background: transparent
+    height: 200px
   .q-item__section--avatar
     color: inherit
     min-width: 45px

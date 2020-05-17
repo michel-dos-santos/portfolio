@@ -39,9 +39,9 @@ Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o r
 
 ## A fazer <a name = "todo"></a>
 - [x] Deploy projeto inicial.
-- [ ] Atualizar icons e texto laterais.
-- [ ] Melhorar designer dos cards dos serviços.
-- [ ] Adicionar efeito nos cards dos serviços.
+- [x] Atualizar icons e texto laterais.
+- [x] Melhorar designer dos cards dos serviços.
+- [x] Adicionar efeito nos cards dos serviços.
 - [ ] Atualizar seção Portfolio.
 - [ ] Adicionar webchat na seção de contatos.
 - [ ] Adicionar build para mobile.

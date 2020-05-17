@@ -1,11 +1,11 @@
 const initialState = {
   menus: [
-    { name: 'home', label: 'Home', icon: 'inbox', link: '#home' },
-    { name: 'about', label: 'About', icon: 'inbox', link: '#about' },
-    { name: 'services', label: 'Services', icon: 'inbox', link: '#services' },
-    { name: 'portfolio', label: 'Portfolio', icon: 'inbox', link: '#portfolio' },
+    { name: 'home', label: 'Início', icon: 'home', link: '#home' },
+    { name: 'about', label: 'Sobre', icon: 'fas fa-address-card', link: '#about' },
+    { name: 'services', label: 'Serviços', icon: 'fas fa-user-tie', link: '#services' },
+    { name: 'portfolio', label: 'Portfolio', icon: 'fas fa-object-group', link: '#portfolio' },
     // { name: 'blog', label: 'Blog', icon: 'inbox', link: '#blog' },
-    { name: 'contact', label: 'Contact', icon: 'inbox', link: '#contact' }
+    { name: 'contact', label: 'Contato', icon: 'fas fa-phone', link: '#contact' }
   ],
   miniState: true
 }
