@@ -1,58 +1,58 @@
 <template>
   <q-page padding class="background">
     <q-scroll-area style="height: 100vh; width: 100vw">
-    <q-drawer
-      show-if-above
-      :mini="menuOver"
-      :mini-width="32"
-      :width="130"
-      :breakpoint="200"
-      content-style="background-color: transparent"
-    >
-      <q-list padding>
-        <q-item
-          clickable
-          dense
-          v-ripple
-          v-for="menu in menus"
-          :key="menu.name"
-          class="bg-white q-pa-xs item-menu"
-          :style="`width: ${!$q.platform.is.mobile ? 130 : 32}px;`"
-          @click="scrollToElement(menu.name)">
-          <q-item-section avatar>
-            <q-icon :name="menu.icon" />
-          </q-item-section>
+      <q-drawer
+        show-if-above
+        :mini="menuOver"
+        :mini-width="32"
+        :width="130"
+        :breakpoint="200"
+        content-style="background-color: transparent"
+      >
+        <q-list padding>
+          <q-item
+            clickable
+            dense
+            v-ripple
+            v-for="menu in menus"
+            :key="menu.name"
+            class="bg-white q-pa-xs item-menu"
+            :style="`width: ${!$q.platform.is.mobile ? 130 : 32}px;`"
+            @click="scrollToElement(menu.name)">
+            <q-item-section avatar>
+              <q-icon :name="menu.icon" />
+            </q-item-section>
 
-          <q-item-section>
-            {{menu.label}}
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-drawer>
+            <q-item-section>
+              {{menu.label}}
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-drawer>
 
-    <section :id="home">
-      <home />
-    </section>
+      <section :id="home">
+        <home />
+      </section>
 
-    <section :id="about">
-      <about />
-    </section>
+      <section :id="about">
+        <about />
+      </section>
 
-    <section :id="services">
-      <services />
-    </section>
+      <section :id="services">
+        <services />
+      </section>
 
-    <section :id="portfolio">
-      <portfolio />
-    </section>
+      <section :id="portfolio">
+        <portfolio />
+      </section>
 
-    <!--section :id="blog">
-      <blog />
-    </section-->
+      <!--section :id="blog">
+        <blog />
+      </section-->
 
-    <section :id="contact">
-      <contact />
-    </section>
+      <section :id="contact">
+        <contact />
+      </section>
     </q-scroll-area>
   </q-page>
 </template>

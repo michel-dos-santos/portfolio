@@ -1,23 +1,25 @@
 <template>
   <div class="container text-h6 text-white" :style="`padding: 50px ${!$q.platform.is.mobile ? 150 : 50}px`">
-    <p class="text-h1 text-orange">Serviços</p>
+    <p :class="`text-h${$q.screen.width < 398 ? 2 : 1} text-orange`">Serviços</p>
     <p class="text-h5 text-italic text-orange">Pronto para te servir em:</p>
     <div class="row justify-center">
       <div v-for="service in services" :key="service.id" class="q-px-lg">
-        <q-card
-          class="text-white q-mt-lg zoom"
-          :style="$q.screen.width <= 905 ? `width: ${$q.screen.width - 100}px` : 'width: 550px'"
-        >
-          <q-img width="100%" height="30vh" :src="service.url" basic>
-            <div class="absolute-bottom text-h6">
-              <div class="text-h6">{{service.title}}</div>
-            </div>
-          </q-img>
+          <q-card
+            class="text-white q-mt-lg zoom"
+            :style="$q.screen.width <= 905 ? `width: ${$q.screen.width - 100}px` : 'width: 560px'"
+          >
+            <q-intersection transition="scale" style="width: 100%; min-height: 30vh">
+              <q-img width="100%" height="30vh" :src="service.url" basic>
+                <div class="absolute-bottom text-h6">
+                  <div class="text-h6">{{service.title}}</div>
+                </div>
+              </q-img>
+            </q-intersection>
 
-          <q-card-section class="q-pt-none">
-            {{service.description}}
-          </q-card-section>
-        </q-card>
+            <q-card-section class="q-pt-none">
+              {{service.description}}
+            </q-card-section>
+          </q-card>
       </div>
     </div>
     <br>
@@ -45,13 +47,13 @@ export default {
           id: 3,
           url: 'statics/backend.jpg',
           title: 'Desenvolvedor Back-end',
-          description: 'Utilizando as principais tecnológias de mercado: Java, NodeJS, Kotlin...'
+          description: 'Utilizando as principais tecnologias de mercado: Java, NodeJS, Kotlin...'
         },
         {
           id: 4,
           url: 'statics/frontend.webp',
           title: 'Desenvolvedor Front-End',
-          description: 'Utilizando as principais tecnológias de mercado: HTML5, JavaScript, CSS3, AngularJS, ReactS, Vue.js...'
+          description: 'Utilizando as principais tecnologias de mercado: HTML5, JavaScript, CSS3, AngularJS, ReactS, Vue.js...'
         }
       ]
     }

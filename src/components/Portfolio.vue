@@ -1,6 +1,6 @@
 <template>
   <div class="container text-h6 text-white" :style="`padding: 50px ${!$q.platform.is.mobile ? 150 : 50}px`">
-    <p class="text-h1 text-orange">Portfolio</p>
+    <p :class="`text-h${$q.screen.width < 398 ? 2 : 1} text-orange`">Portfolio</p>
     <p class="text-h5 text-italic text-orange">Alguns dos meus desafios</p>
     <p>Estou atualizando os meus repositórios de códigos fontes para trazer os meus portfolios com imagens, videos e uma documentação :)</p>
     <br>
