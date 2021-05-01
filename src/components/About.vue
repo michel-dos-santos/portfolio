@@ -86,7 +86,10 @@ export default {
         ['Jaimar', 5],
         ['Ivan', 4],
         ['Fernando', 3],
-        ['Andrea', 3]
+        ['Andrea', 3],
+        ['Daniel', 3],
+        ['Rafael', 3],
+        ['Thiago', 3]
       ],
       fontFamily: 'Fredericka the Great',
       colorItems: ['#ffd077', '#3bc4c7', '#3a9eea', '#ff4e69', '#461e47'],
