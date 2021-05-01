@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ./",
-    "deploy": "quasar build && sh firebaseDeploy.sh"
+    "deploy-firebase": "quasar build && sh firebaseDeploy.sh"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
