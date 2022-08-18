@@ -1,48 +1,41 @@
-<p align="center">
-    <a href="" rel="noopener">
-        <img width=250px height=250px src="./src/assets/logo.png" alt="Portfolio logo">
-    </a>
-</p>
+# Portfolio App (portfolio)
 
-<h3 align="center"><a href="https://micheldossantos.com" rel="noopener">Meu Portfolio</a></h3>
+A Portfolio project
 
-<div align="center">
+## Install the dependencies
+```bash
+yarn
+# or
+npm install
+```
 
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
-</div>
 
----
+### Lint the files
+```bash
+yarn lint
+# or
+npm run lint
+```
 
-<p align="center"> Projeto criado com intuido de demonstrar um pouquinho do meu conhecimento, minha história e meu portfolio de aplicações, códigos, tutoriais entre outras...
-</p>
 
-## Tabela de conteúdo
-- [Sobre](#about)
-- [Tecnologias utilizadas](#built_using)
-- [TODO](#todo)
+### Format the files
+```bash
+yarn format
+# or
+npm run format
+```
 
-## Sobre <a name = "about"></a>
-Neste projeto conto resumidamente a minha história neste mundo imenso da tecnológia da informação, expecificamente na área de desenvolvimento de software.
-Conta também minhas principais especializações, meus portfolios e deixo também o meu contato para caso alguém queira me contratar e saber maiores informações.
 
-Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o resultado do Meu Portfolio
 
-<p align="center">
-    <img src="./src/assets/Portfolio.gif" alt="Portfolio logo">
-</p>    
+### Build the app for production
+```bash
+quasar build
+```
 
-## Tecnologias utilizadas <a name = "built_using"></a>
-- [VueJS](https://vuejs.org/) - JavaScript Framework
-- [Vuex](https://vuex.vuejs.org) - Library State Management Pattern for VueJS
-- [Quasar](https://expressjs.com/) - Front-end Quasar framework for VueJS
-
-## A fazer <a name = "todo"></a>
-- [x] Deploy projeto inicial.
-- [x] Atualizar icons e texto laterais.
-- [x] Melhorar designer dos cards dos serviços.
-- [x] Adicionar efeito nos cards dos serviços.
-- [ ] Atualizar seção Portfolio.
-- [ ] Adicionar webchat na seção de contatos.
-- [ ] Adicionar build para mobile.
-
+### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
