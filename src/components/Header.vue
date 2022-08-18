@@ -10,9 +10,9 @@
       </div>
     </q-card-section>
 
-    <SectionComponent :options="sections.info" />
-    <SectionComponent :options="sections.socials" />
-    <SectionComponent :options="sections.hobbies">
+    <SectionComponent :options="info" />
+    <SectionComponent :options="socials" />
+    <SectionComponent :options="hobbies">
       <template v-slot:item="{ item }">
         <q-chip color="grey">
           <q-avatar>
@@ -22,7 +22,7 @@
         </q-chip>
       </template>
     </SectionComponent>
-    <SectionComponent :options="sections.languages">
+    <SectionComponent :options="languages">
       <template v-slot:item="{ item }">
         <q-circular-progress
           show-value
@@ -41,6 +41,7 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { date } from "quasar";
 import AvatarComponent from "components/Avatar";
 import SectionComponent from "components/section/Section";
 
@@ -50,93 +51,97 @@ export default defineComponent({
     AvatarComponent,
     SectionComponent,
   },
-  setup() {
-    return {
-      sections: ref({
-        info: {
-          title: "INFO",
-          items: [
-            {
-              name: "Email",
-              icon: "email",
-              text: "michel.ds.santos@gmail.com",
-            },
+  computed: {
+    info() {
+      let birthday = new Date(1988, 12, 10);
+      let now = Date.now();
+      let unit = "years";
+      let diff = date.getDateDiff(now, birthday, unit);
+      return {
+        title: "INFO",
+        items: [
+          {
+            name: "Email",
+            icon: "email",
+            text: "michel.ds.santos@gmail.com",
+          },
 
-            {
-              name: "Data de Nascimento",
-              icon: "info",
-              text: "10 de Dezembro de 1988",
-            },
-            {
-              name: "Endereço",
-              icon: "info",
-              text: "Itaquaquecetuba, São Paulo",
-            },
-          ],
-        },
-        socials: {
-          title: "SOCIALS",
-          items: [
-            {
-              icon: "info",
-              text: "github.com/michel-dos-santos",
-              link: "https://github.com/michel-dos-santos",
-            },
-            {
-              icon: "info",
-              text: "www.linkedin.com/in/michel-dos-santos-8487634a",
-              link: "https://www.linkedin.com/in/michel-dos-santos-8487634a/",
-            }
-          ],
-        },
-        hobbies: {
-          title: "HOBBIES",
-          items: [
-            {
-              icon: "info",
-              text: "Getting out of Safe Zone",
-            },
-            {
-              icon: "info",
-              text: "Challenges",
-            },
-            {
-              icon: "info",
-              text: "Cycling",
-            },
-            {
-              icon: "info",
-              text: "Nature",
+          {
+            name: "Data de Nascimento",
+            icon: "info",
+            text: `10 de Dezembro de 1988 (${diff} anos)`,
+          },
+          {
+            name: "Endereço",
+            icon: "info",
+            text: "Itaquaquecetuba, São Paulo",
+          },
+        ],
+      };
+    },
+    socials() {
+      return {
+        title: "SOCIALS",
+        items: [
+          {
+            icon: "info",
+            text: "github.com/michel-dos-santos",
+            link: "https://github.com/michel-dos-santos",
+          },
+          {
+            icon: "info",
+            text: "www.linkedin.com/in/michel-dos-santos-8487634a",
+            link: "https://www.linkedin.com/in/michel-dos-santos-8487634a/",
+          },
+        ],
+      };
+    },
+    hobbies() {
+      return {
+        title: "HOBBIES",
+        items: [
+          {
+            icon: "info",
+            text: "Sair da zona de conforto",
+          },
+          {
+            icon: "info",
+            text: "Desafios",
+          },
+          {
+            icon: "info",
+            text: "Ciclismo",
+          },
+          {
+            icon: "info",
+            text: "Jogar Games",
 
-              icon: "info",
-              text: "Sports",
-            },
-            {
-              icon: "info",
-              text: "Music",
-            },
-
-            {
-              icon: "info",
-              text: "Books",
-            },
-          ],
-        },
-        languages: {
-          title: "IDIOMAS",
-          items: [
-            {
-              text: "Português",
-              value: 100,
-            },
-            {
-              text: "English",
-              value: 45,
-            },
-          ],
-        },
-      }),
-    };
+            icon: "info",
+            text: "Ler Livros",
+          },
+          {
+            icon: "info",
+            text: "Ouvir Musica",
+          },
+        ],
+      };
+    },
+    languages() {
+      return {
+        title: "IDIOMAS",
+        items: [
+          {
+            text: "Português",
+            value: 100,
+          },
+          {
+            text: "English",
+            value: 45,
+          },
+        ],
+      };
+    },
   },
+  setup() {},
 });
 </script>
