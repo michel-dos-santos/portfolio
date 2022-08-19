@@ -6,9 +6,9 @@ name: Deploy to AWS
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: [ "v1" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "v1" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
       - name: Npm install & npm build
         run: |
           npm install
-          quasar build
+          npm run build-portfolio
       
       - name: S3 Sync
         uses: jakejarvis/s3-sync-action@v0.5.1
@@ -42,13 +42,13 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-1'
-          SOURCE_DIR: 'dist'
+          SOURCE_DIR: 'dist/spa'
           
-      - name: Invalidate AWS CloudFront
-        uses: chetan/invalidate-cloudfront-action@v2
-        env: 
-          DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
-          PATHS: '/*'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'
+      #- name: Invalidate AWS CloudFront
+      #  uses: chetan/invalidate-cloudfront-action@v2
+      #  env: 
+      #    DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+      #    PATHS: '/*'
+      #    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #    AWS_REGION: 'us-east-1'

@@ -1,12 +1,19 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-
-    <router-view />
-
+  <q-layout view="lHh Lpr lFf" class="bg-grey-8">
+      <q-page-container>
+      <router-view />
+    </q-page-container>
   </q-layout>
 </template>
 
-<style lang="sass">
-.q-layout-padding
-  padding: 0px
-</style>
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'MainLayout',
+  components: {
+  },
+  setup () {
+  }
+})
+</script>

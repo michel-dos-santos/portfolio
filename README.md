@@ -28,21 +28,21 @@ Conta também minhas principais especializações, meus portfolios e deixo tamb�
 
 Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o resultado do Meu Portfolio
 
-<p align="center">
-    <img src="./src/assets/Portfolio.gif" alt="Portfolio logo">
-</p>    
-
 ## Tecnologias utilizadas <a name = "built_using"></a>
 - [VueJS](https://vuejs.org/) - JavaScript Framework
-- [Vuex](https://vuex.vuejs.org) - Library State Management Pattern for VueJS
-- [Quasar](https://expressjs.com/) - Front-end Quasar framework for VueJS
+- [Pinia](https://pinia.vuejs.org/) - Library State Management Pattern for VueJS
+- [Quasar](https://quasar.dev/) - Front-end Quasar framework for VueJS
+- [AWS S3](https://aws.amazon.com/) - Armazenamento de Objetos
+- [AWS Route 53](https://aws.amazon.com/) - Conecta efetivamente as solicitações do usuário à infraestrutura em execução na AWS
+- [GitHub](https://www.github.com/) - Hospedagem de código-fonte e arquivos com controle de versão
+- [GitHub Actions](https://www.github.com/) - Automatização de build e deploy
 
 ## A fazer <a name = "todo"></a>
 - [x] Deploy projeto inicial.
-- [x] Atualizar icons e texto laterais.
+- [x] Responsividade.
+- [x] Atualizar icons e texto.
 - [x] Melhorar designer dos cards dos serviços.
 - [x] Adicionar efeito nos cards dos serviços.
+- [ ] Atualizar seção Experiência Profissional.
 - [ ] Atualizar seção Portfolio.
-- [ ] Adicionar webchat na seção de contatos.
-- [ ] Adicionar build para mobile.
 
