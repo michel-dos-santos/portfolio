@@ -1,11 +1,11 @@
 <template>
-  <q-card dark bordered class="bg-grey-9 q-ma-lg">
+  <q-card dark bordered class="bg-grey-9 q-pb-xl">
     <q-card-section class="col">
       <AvatarComponent class="row justify-center" />
       <div class="col q-pt-md">
-        <div class="row justify-center text-h3">Michel dos Santos</div>
-        <div class="row justify-center text-h5">
-          Um desenvolvedor web amante de desafios
+        <div class="row justify-center text-h3 text-bold">Michel dos Santos</div>
+        <div class="row justify-center text-h5 text-primary">
+          Um desenvolvedor web amante dos desafios
         </div>
       </div>
     </q-card-section>
@@ -43,7 +43,7 @@
 import { defineComponent, ref } from "vue";
 import { date } from "quasar";
 import AvatarComponent from "components/Avatar";
-import SectionComponent from "components/section/Section";
+import SectionComponent from "components/header/section/Section";
 
 export default defineComponent({
   name: "HeaderComponent",
@@ -62,18 +62,18 @@ export default defineComponent({
         items: [
           {
             name: "Email",
-            icon: "email",
+            icon: "mdi-email",
             text: "michel.ds.santos@gmail.com",
           },
 
           {
             name: "Data de Nascimento",
-            icon: "info",
+            icon: "mdi-cake-variant",
             text: `10 de Dezembro de 1988 (${diff} anos)`,
           },
           {
             name: "Endereço",
-            icon: "info",
+            icon: "mdi-map-marker",
             text: "Itaquaquecetuba, São Paulo",
           },
         ],
@@ -81,15 +81,15 @@ export default defineComponent({
     },
     socials() {
       return {
-        title: "SOCIALS",
+        title: "REDES",
         items: [
           {
-            icon: "info",
+            icon: "mdi-github",
             text: "github.com/michel-dos-santos",
             link: "https://github.com/michel-dos-santos",
           },
           {
-            icon: "info",
+            icon: "mdi-linkedin",
             text: "www.linkedin.com/in/michel-dos-santos-8487634a",
             link: "https://www.linkedin.com/in/michel-dos-santos-8487634a/",
           },
@@ -101,26 +101,27 @@ export default defineComponent({
         title: "HOBBIES",
         items: [
           {
-            icon: "info",
+            icon: "mdi-arrow-left",
             text: "Sair da zona de conforto",
           },
           {
-            icon: "info",
+            icon: "mdi-puzzle",
             text: "Desafios",
           },
           {
-            icon: "info",
+            icon: "mdi-bike",
             text: "Ciclismo",
           },
           {
-            icon: "info",
+            icon: "mdi-microsoft-xbox-controller",
             text: "Jogar Games",
-
-            icon: "info",
+          },
+          {
+            icon: "mdi-book-open-variant",
             text: "Ler Livros",
           },
           {
-            icon: "info",
+            icon: "mdi-playlist-music",
             text: "Ouvir Musica",
           },
         ],
