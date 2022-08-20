@@ -34,6 +34,8 @@ Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o r
 - [Quasar](https://quasar.dev/) - Front-end Quasar framework for VueJS
 - [AWS S3](https://aws.amazon.com/) - Armazenamento de Objetos
 - [AWS Route 53](https://aws.amazon.com/) - Conecta efetivamente as solicitações do usuário à infraestrutura em execução na AWS
+- [CloudFront](https://aws.amazon.com/) - Uma rede de entrega de conteúdo para fornecer dados, vídeos e recursos aos clientes, onde eles estiverem, e com segurança
+- [AWS Certificate Manager (ACM)](https://aws.amazon.com/) - Facilita o provisionamento, o gerenciamento, a implantação e a renovação de certificados SSL/TLS
 - [GitHub](https://www.github.com/) - Hospedagem de código-fonte e arquivos com controle de versão
 - [GitHub Actions](https://www.github.com/) - Automatização de build e deploy
 
