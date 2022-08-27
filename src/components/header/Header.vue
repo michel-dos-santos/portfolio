@@ -14,7 +14,7 @@
     <SectionComponent :options="socials" />
     <SectionComponent :options="hobbies">
       <template v-slot:item="{ item }">
-        <q-chip color="grey">
+        <q-chip color="white">
           <q-avatar>
             <q-icon :name="item.icon" />
           </q-avatar>
