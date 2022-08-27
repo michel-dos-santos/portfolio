@@ -36,10 +36,40 @@
       </q-item>
     </SectionComponent>
 
-    <SectionComponent :title="skills.title" :subTitle="skills.subTitle">
+    <SectionComponent :title="softSkills.title" :subTitle="softSkills.subTitle">
       <div class="row q-col-gutter-x-xs">
         <div
-          v-for="(item, index) in skills.items"
+          v-for="(item, index) in softSkills.items"
+          :key="index"
+          class="col-xs-12 col-sm-6"
+        >
+          <div class="q-px-md">
+            <q-item class="q-pa-none">
+              <q-item-section avatar>
+                <q-icon :name="item.icon" color="grey" />
+              </q-item-section>
+
+              <q-item-section>
+                <q-item-label>{{ item.title }}</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item-section>
+              <q-linear-progress
+                :value="item.value / 100"
+                rounded
+                color="primary"
+              />
+            </q-item-section>
+          </div>
+        </div>
+      </div>
+    </SectionComponent>
+
+    <SectionComponent :title="hardSkills.title" :subTitle="hardSkills.subTitle">
+      <div class="row q-col-gutter-x-xs">
+        <div
+          v-for="(item, index) in hardSkills.items"
           :key="index"
           class="col-xs-12 col-sm-6"
         >
@@ -184,9 +214,9 @@ export default defineComponent({
         ],
       };
     },
-    skills() {
+    softSkills() {
       return {
-        title: "SKILLS",
+        title: "SOFT SKILLS",
         subTitle: "(% são relativas)",
         items: [
           {
@@ -199,6 +229,34 @@ export default defineComponent({
             icon: "work_history",
             value: 100,
           },
+          {
+            title: "Liderança",
+            icon: "groups",
+            value: 60,
+          },
+          {
+            title: "Pensamento crítico",
+            icon: "mdi-information",
+            value: 65,
+          },
+          {
+            title: "Resolução de problemas",
+            icon: "mdi-information",
+            value: 80,
+          },
+          {
+            title: "Criatividade",
+            icon: "mdi-information",
+            value: 45,
+          },
+        ],
+      };
+    },
+    hardSkills() {
+      return {
+        title: "HARD SKILLS",
+        subTitle: "(% são relativas)",
+        items: [
           {
             title: "Java 5+",
             icon: "mdi-language-java",
@@ -268,11 +326,6 @@ export default defineComponent({
             title: "Jira",
             icon: "mdi-jira",
             value: 80,
-          },
-          {
-            title: "Liderança",
-            icon: "groups",
-            value: 65,
           },
           {
             title: "CMS Joomla",
