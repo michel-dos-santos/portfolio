@@ -1,5 +1,5 @@
 <template>
-  <q-card bordered class="bg-white-9 q-mb-lg">
+  <q-card bordered class="bg-white-9 q-mb-lg shadow-up-20">
     <SectionComponent :title="whoAmI.title">
       <q-item>
         {{ whoAmI.content }}
