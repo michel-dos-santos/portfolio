@@ -30,10 +30,10 @@
 <script>
 import { defineComponent } from "vue";
 import { date } from "quasar";
-import AvatarComponent from "components/header/Avatar";
+import AvatarComponent from "components/header/avatar/Avatar";
 import SectionComponent from "components/header/section/Section";
-import HobbyItemComponent from "components/header/HobbyItem";
-import LanguageItemComponent from "components/header/LanguageItem";
+import HobbyItemComponent from "components/header/hobby/HobbyItem";
+import LanguageItemComponent from "components/header/language/LanguageItem";
 
 export default defineComponent({
   name: "HeaderComponent",

@@ -26,12 +26,12 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { date } from "quasar";
-import SectionComponent from "components/resume/Section";
-import WhoAmIItemComponent from "components/resume/WhoAmIItem";
-import MyAchievementsItemComponent from "components/resume/MyAchievementsItem";
-import EducationItemComponent from "components/resume/EducationItem";
-import SoftSkilltemComponent from "components/resume/SoftSkillItem";
-import HardSkillItemComponent from "components/resume/HardSkillItem";
+import SectionComponent from "components/resume/section/Section";
+import WhoAmIItemComponent from "components/resume/who-am-i/WhoAmIItem";
+import MyAchievementsItemComponent from "components/resume/achievement/MyAchievementsItem";
+import EducationItemComponent from "components/resume/education/EducationItem";
+import SoftSkilltemComponent from "components/resume/soft-skill/SoftSkillItem";
+import HardSkillItemComponent from "components/resume/hard-skill/HardSkillItem";
 
 export default defineComponent({
   name: "ResumeComponent",

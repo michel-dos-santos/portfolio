@@ -19,7 +19,7 @@
 
 <script>
 import { defineComponent, useSlots } from "vue";
-import SectionItemComponent from "components/header/section/SectionItem";
+import SectionItemComponent from "components/header/section/item/SectionItem";
 
 export default defineComponent({
   name: "SectionComponent",
