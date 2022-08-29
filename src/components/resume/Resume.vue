@@ -1,100 +1,25 @@
 <template>
   <q-card bordered class="bg-white-9 q-mb-lg shadow-up-20">
     <SectionComponent :title="whoAmI.title">
-      <q-item>
-        {{ whoAmI.content }}
-      </q-item>
+      <WhoAmIItemComponent :text="whoAmI.content" />
     </SectionComponent>
 
     <SectionComponent :title="myAchievements.title" v-if="false">
-      <q-item
-        v-for="item in myAchievements.items"
-        :key="item.name"
-        :item="item"
-      >
-        <q-item-section avatar>
-          <q-icon :name="item.icon" />
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>{{ item.name }}</q-item-label>
-          <q-item-label caption class="text-grey">{{ item.text }}</q-item-label>
-        </q-item-section>
-      </q-item>
+      <MyAchievementsItemComponent :items="myAchievements.items" />
     </SectionComponent>
 
     <SectionComponent :title="education.title">
-      <q-item v-for="item in education.items" :key="item.name" :item="item">
-        <q-item-section avatar>
-          <q-item-label>{{ item.period }}</q-item-label>
-        </q-item-section>
-
-        <q-item-section>
-          <q-item-label>{{ item.name }}</q-item-label>
-          <q-item-label caption class="text-grey">{{ item.text }}</q-item-label>
-        </q-item-section>
-      </q-item>
+      <EducationItemComponent :items="education.items" />
     </SectionComponent>
 
     <SectionComponent :title="softSkills.title" :subTitle="softSkills.subTitle">
-      <div class="row q-col-gutter-x-xs">
-        <div
-          v-for="(item, index) in softSkills.items"
-          :key="index"
-          class="col-xs-12 col-sm-6"
-        >
-          <div class="q-px-md">
-            <q-item class="q-pa-none">
-              <q-item-section avatar>
-                <q-icon :name="item.icon" color="grey" />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>{{ item.title }}</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item-section>
-              <q-linear-progress
-                :value="item.value / 100"
-                rounded
-                color="primary"
-              />
-            </q-item-section>
-          </div>
-        </div>
-      </div>
+      <SoftSkilltemComponent :items="softSkills.items" />
     </SectionComponent>
 
     <SectionComponent :title="hardSkills.title" :subTitle="hardSkills.subTitle">
-      <div class="row q-col-gutter-x-xs">
-        <div
-          v-for="(item, index) in hardSkills.items"
-          :key="index"
-          class="col-xs-12 col-sm-6"
-        >
-          <div class="q-px-md">
-            <q-item class="q-pa-none">
-              <q-item-section avatar>
-                <q-icon :name="item.icon" color="grey" />
-              </q-item-section>
-
-              <q-item-section>
-                <q-item-label>{{ item.title }}</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item-section>
-              <q-linear-progress
-                :value="item.value / 100"
-                rounded
-                color="primary"
-              />
-            </q-item-section>
-          </div>
-        </div>
-      </div>
+      <HardSkillItemComponent :items="hardSkills.items" />
     </SectionComponent>
+
   </q-card>
 </template>
 
@@ -102,11 +27,21 @@
 import { defineComponent, ref } from "vue";
 import { date } from "quasar";
 import SectionComponent from "components/resume/Section";
+import WhoAmIItemComponent from "components/resume/WhoAmIItem";
+import MyAchievementsItemComponent from "components/resume/MyAchievementsItem";
+import EducationItemComponent from "components/resume/EducationItem";
+import SoftSkilltemComponent from "components/resume/SoftSkillItem";
+import HardSkillItemComponent from "components/resume/HardSkillItem";
 
 export default defineComponent({
   name: "ResumeComponent",
   components: {
     SectionComponent,
+    WhoAmIItemComponent,
+    MyAchievementsItemComponent,
+    EducationItemComponent,
+    SoftSkilltemComponent,
+    HardSkillItemComponent,
   },
   computed: {
     whoAmI() {
@@ -115,7 +50,7 @@ export default defineComponent({
       let unit = "years";
       let diff = date.getDateDiff(now, schoolEnded, unit);
       return {
-        title: "Quem sou eu?",
+        title: "QUEM SOU EU?",
         content:
           `Sou analista desenvolvedor fullstack, tenho mais de ${diff} anos na área de desenvolvimento de software e sou simplesmente apaixonado por T.I e no que ela nos possibilita fazer.`,
       };
@@ -149,7 +84,7 @@ export default defineComponent({
     },
     education() {
       return {
-        title: "Educação e Cursos",
+        title: "EDUCAÇÃO E CURSOS",
         items: [
           {
             period: "2018",

@@ -14,26 +14,12 @@
     <SectionComponent :options="socials" />
     <SectionComponent :options="hobbies">
       <template v-slot:item="{ item }">
-        <q-chip color="white">
-          <q-avatar>
-            <q-icon :name="item.icon" />
-          </q-avatar>
-          {{ item.text }}
-        </q-chip>
+        <HobbyItemComponent :icon="item.icon" :text="item.text" />
       </template>
     </SectionComponent>
     <SectionComponent :options="languages">
       <template v-slot:item="{ item }">
-        <q-circular-progress
-          show-value
-          class="text-light-white q-ma-sm"
-          :value="item.value"
-          size="90px"
-          font-size="12px"
-          :thickness="0.1"
-          color="white"
-          >{{ item.text }}
-        </q-circular-progress>
+        <LanguageItemComponent :value="item.value" :text="item.text" />
       </template>
     </SectionComponent>
   </q-card>
@@ -42,14 +28,18 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { date } from "quasar";
-import AvatarComponent from "components/Avatar";
+import AvatarComponent from "components/header/Avatar";
 import SectionComponent from "components/header/section/Section";
+import HobbyItemComponent from "components/header/HobbyItem";
+import LanguageItemComponent from "components/header/LanguageItem";
 
 export default defineComponent({
   name: "HeaderComponent",
   components: {
     AvatarComponent,
     SectionComponent,
+    HobbyItemComponent,
+    LanguageItemComponent
   },
   computed: {
     info() {
