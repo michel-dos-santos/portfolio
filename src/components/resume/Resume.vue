@@ -50,14 +50,13 @@ export default defineComponent({
       let unit = "years";
       let diff = date.getDateDiff(now, schoolEnded, unit);
       return {
-        title: "QUEM SOU EU?",
-        content:
-          `Sou analista desenvolvedor fullstack, tenho mais de ${diff} anos na área de desenvolvimento de software e sou simplesmente apaixonado por T.I e no que ela nos possibilita fazer.`,
+        title: this.$t("RESUME.WHO_AM_I.TITLE", 1),
+        content: this.$t("RESUME.WHO_AM_I.CONTENT", { diff }),
       };
     },
     myAchievements() {
       return {
-        title: "Minhas conquistas",
+        title: this.$t("RESUME.MY_ACHIEVEMENTS.TITLE", 1),
         items: [
           {
             icon: "info",
@@ -84,7 +83,7 @@ export default defineComponent({
     },
     education() {
       return {
-        title: "EDUCAÇÃO E CURSOS",
+        title: this.$t("RESUME.EDUCATION.TITLE", 1),
         items: [
           {
             period: "2018",
@@ -134,53 +133,38 @@ export default defineComponent({
         ],
       };
     },
-    languages() {
-      return {
-        title: "IDIOMAS",
-        items: [
-          {
-            text: "Português",
-            value: 100,
-          },
-          {
-            text: "English",
-            value: 45,
-          },
-        ],
-      };
-    },
     softSkills() {
       return {
-        title: "SOFT SKILLS",
-        subTitle: "(% são relativas)",
+        title: this.$t("RESUME.SOFT_SKILLS.TITLE", 1),
+        subTitle: this.$t("RESUME.SOFT_SKILLS.SUB_TITLE", 1),
         items: [
           {
-            title: "Comunicativo",
+            title: this.$t("RESUME.SOFT_SKILLS.COMMUNICATIVE", 1),
             icon: "record_voice_over",
             value: 80,
           },
           {
-            title: "Proativo",
+            title: this.$t("RESUME.SOFT_SKILLS.PROACTIVE", 1),
             icon: "work_history",
             value: 100,
           },
           {
-            title: "Liderança",
+            title: this.$t("RESUME.SOFT_SKILLS.LEADERSHIP", 1),
             icon: "groups",
             value: 60,
           },
           {
-            title: "Pensamento crítico",
+            title: this.$t("RESUME.SOFT_SKILLS.CRITICAL_THINKING", 1),
             icon: "mdi-information",
             value: 65,
           },
           {
-            title: "Resolução de problemas",
+            title: this.$t("RESUME.SOFT_SKILLS.PROBLEM_SOLVING", 1),
             icon: "mdi-information",
             value: 80,
           },
           {
-            title: "Criatividade",
+            title: this.$t("RESUME.SOFT_SKILLS.CREATIVITY", 1),
             icon: "mdi-information",
             value: 45,
           },
@@ -189,8 +173,8 @@ export default defineComponent({
     },
     hardSkills() {
       return {
-        title: "HARD SKILLS",
-        subTitle: "(% são relativas)",
+        title: this.$t("RESUME.HARD_SKILLS.TITLE", 1),
+        subTitle: this.$t("RESUME.HARD_SKILLS.SUB_TITLE", 1),
         items: [
           {
             title: "Java 5+",

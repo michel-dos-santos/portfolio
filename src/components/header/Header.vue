@@ -3,9 +3,11 @@
     <q-card-section class="col">
       <AvatarComponent class="row justify-center" />
       <div class="col q-pt-md">
-        <div class="row justify-center text-h3 text-bold">Michel dos Santos</div>
+        <div class="row justify-center text-h3 text-bold">
+          {{ $t("HEADER.NAME", 1) }}
+        </div>
         <div class="row justify-center text-h5 text-primary">
-          Um desenvolvedor web amante dos desafios
+          {{ $t("HEADER.MY_PHRASE", 1) }}
         </div>
       </div>
     </q-card-section>
@@ -19,14 +21,14 @@
     </SectionComponent>
     <SectionComponent :options="languages">
       <template v-slot:item="{ item }">
-        <LanguageItemComponent :value="item.value" :text="item.text" />
+        <LanguageItemComponent :value="item.value" :text="item.text" :language="item.language" />
       </template>
     </SectionComponent>
   </q-card>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { date } from "quasar";
 import AvatarComponent from "components/header/Avatar";
 import SectionComponent from "components/header/section/Section";
@@ -39,7 +41,7 @@ export default defineComponent({
     AvatarComponent,
     SectionComponent,
     HobbyItemComponent,
-    LanguageItemComponent
+    LanguageItemComponent,
   },
   computed: {
     info() {
@@ -48,21 +50,21 @@ export default defineComponent({
       let unit = "years";
       let diff = date.getDateDiff(now, birthday, unit);
       return {
-        title: "INFO",
+        title: this.$t("HEADER.INFO.TITLE", 1),
         items: [
           {
-            name: "Email",
+            name: this.$t("HEADER.INFO.EMAIL", 1),
             icon: "mdi-email",
             text: "michel.ds.santos@gmail.com",
           },
 
           {
-            name: "Data de Nascimento",
+            name: this.$t("HEADER.INFO.BIRTHDAY", 1),
             icon: "mdi-cake-variant",
             text: `10 de Dezembro de 1988 (${diff} anos)`,
           },
           {
-            name: "Endereço",
+            name: this.$t("HEADER.INFO.ADDRESS", 1),
             icon: "mdi-map-marker",
             text: "Itaquaquecetuba, São Paulo",
           },
@@ -71,7 +73,7 @@ export default defineComponent({
     },
     socials() {
       return {
-        title: "REDES",
+        title: this.$t("HEADER.SOCIALS.TITLE", 1),
         items: [
           {
             icon: "mdi-github",
@@ -88,51 +90,52 @@ export default defineComponent({
     },
     hobbies() {
       return {
-        title: "HOBBIES",
+        title: this.$t("HEADER.HOBBIES.TITLE", 1),
         items: [
           {
             icon: "mdi-arrow-left",
-            text: "Sair da zona de conforto",
+            text: this.$t("HEADER.HOBBIES.GET_OUT_OF_THE_COMFORT_ZONE", 1),
           },
           {
             icon: "mdi-puzzle",
-            text: "Desafios",
+            text: this.$t("HEADER.HOBBIES.CHALLENGES", 1),
           },
           {
             icon: "mdi-bike",
-            text: "Ciclismo",
+            text: this.$t("HEADER.HOBBIES.BIKE", 1),
           },
           {
             icon: "mdi-microsoft-xbox-controller",
-            text: "Jogar Games",
+            text: this.$t("HEADER.HOBBIES.PLAY_GAMES", 1),
           },
           {
             icon: "mdi-book-open-variant",
-            text: "Ler Livros",
+            text: this.$t("HEADER.HOBBIES.READ_BOOKS", 1),
           },
           {
             icon: "mdi-playlist-music",
-            text: "Ouvir Musica",
+            text: this.$t("HEADER.HOBBIES.LISTEN_MUSIC", 1),
           },
         ],
       };
     },
     languages() {
       return {
-        title: "IDIOMAS",
+        title: this.$t("HEADER.LANGUAGES.TITLE", 1),
         items: [
           {
-            text: "Português",
+            text: this.$t("HEADER.LANGUAGES.PORTUGUESE", 1),
             value: 100,
+            language: 'pt-BR'
           },
           {
-            text: "English",
+            text: this.$t("HEADER.LANGUAGES.ENGLISH", 1),
             value: 45,
+            language: 'en-US'
           },
         ],
       };
     },
   },
-  setup() {},
 });
 </script>
