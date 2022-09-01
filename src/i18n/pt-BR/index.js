@@ -51,5 +51,9 @@ export default {
       TITLE: 'HARD SKILLS',
       SUB_TITLE: '(% são relativas)',
     },
+    EXPERIENCE: {
+      TITLE: 'EXPERIÊNCIA',
+      ACTION_DETAILS: 'Somente detalhes de T.I.'
+    }
   }
 }
