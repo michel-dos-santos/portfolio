@@ -62,6 +62,11 @@ export default defineComponent({
         title: this.$t("RESUME.EDUCATION.TITLE", 1),
         items: [
           {
+            period: "2022",
+            name: "Inglês",
+            text: "SmartUP",
+          },
+          {
             period: "2018",
             name: "Como Tornar-se um Gerente Extraordinário",
             text: "ESPM Escola Superior de Propaganda e Marketing",
