@@ -1,4 +1,9 @@
 export default {
+  YEARS: 'year | years',
+  MONTHS: 'month | months',
+  DAYS: 'day | days',
+  CURRENTLY: 'currently',
+  UNTIL: 'until',
   HEADER: {
     NAME: 'Michel dos Santos',
     MY_PHRASE: 'A web developer lover of the challenges',
@@ -51,5 +56,9 @@ export default {
       TITLE: 'HARD SKILLS',
       SUB_TITLE: '(% are relative)',
     },
+    EXPERIENCE: {
+      TITLE: 'EXPERIENCE',
+      ACTION_DETAILS: 'Only details of T.I.'
+    }
   }
 }

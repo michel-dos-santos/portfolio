@@ -299,7 +299,7 @@ export default defineComponent({
               {
                 function: "Arquiteto de software",
                 startDate: "2021/05",
-                endDate: "Atualmente",
+                endDate: "CURRENTLY",
                 descriptions: [
                   "Liderar e coordenar as atividades e artefatos técnicos dos projetos (Registro de ativos e Seguros).",
                   "Garantir que a arquitetura contemple os atributos de qualidade.",
@@ -316,11 +316,11 @@ export default defineComponent({
                 startDate: "2019/10",
                 endDate: "2021/05",
                 descriptions: [
-                  "Portal de Registros: seu objetivo é registrar e centralizar ativos financeiros (Duplicata Mercantil, Duplicata de Serviço, Cheque pós datado, Contrato ESC e diversos, Empréstimo Consignado e Nota Fiscal) para assim garantir a unicidade do ativo.",
+                  "Portal de Registros: Seu objetivo é registrar e centralizar ativos financeiros (Duplicata Mercantil, Duplicata de Serviço, Cheque pós datado, Contrato ESC e diversos, Empréstimo Consignado e Nota Fiscal) para assim garantir a unicidade do ativo.",
                   "Tecnologias e Ferramentas utilizadas: Java 8, JPA, AngularJS 6, Spring Boot, HTML5, CSS3, JavaScript, Maven, Gradle, JSON, Postman, SQLSERVER, Git, Bitbucket, SourceTree, Putty, Cloud (IBM, AWS), Jira, Jenkins",
                   "Scrum como metodologia ágil.",
                   "",
-                  "Duplicata Digital: seu objetivo é facilitar a relação entre agentes financeiros como bancos, FIDC’s, factoring e empresários que buscam crédito com base em seus recebíveis, garantindo seu lastro e sua unicidade dos títulos, proporcionando a emissão, endosso, aceite, aval e guarda do título de crédito.",
+                  "Duplicata Digital: Seu objetivo é facilitar a relação entre agentes financeiros como bancos, FIDC’s, factoring e empresários que buscam crédito com base em seus recebíveis, garantindo seu lastro e sua unicidade dos títulos, proporcionando a emissão, endosso, aceite, aval e guarda do título de crédito.",
                   "Tecnologias e Ferramentas utilizadas: Java, Hibernate, JSF, PrimeFaces, JasperReports, Spring, HTML, CSS, JavaScript, Maven, JBoss 6, EJB, Tomcat 6, WildFly 8, JSON, SOAP, SVN, PostgreSQL, DB2, Putty, Cloud (IBM, AWS), Jira.",
                   "Scrum como metodologia ágil.",
                   "",
@@ -379,7 +379,7 @@ export default defineComponent({
           {
             company: "Sitel",
             location: "Mooca - SP",
-            onlyTI: false,
+            onlyTI: true,
             functions: [
               {
                 function: "Analista de Suporte Pleno – L2 Consumer",

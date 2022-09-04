@@ -1,4 +1,9 @@
 export default {
+  YEARS: 'ano | anos',
+  MONTHS: 'mês | meses',
+  DAYS: 'dia | dias',
+  CURRENTLY: 'atualmente',
+  UNTIL: 'à',
   HEADER: {
     NAME: 'Michel dos Santos',
     MY_PHRASE: 'Um desenvolvedor web amante dos desafios',

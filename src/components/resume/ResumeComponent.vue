@@ -21,8 +21,8 @@
       <HardSkillItemComponent :items="hardSkills.items" />
     </SectionComponent>
 
-    <!--SectionComponent :title="experience.title">
+    <SectionComponent :title="experience.title">
       <ExperienceItemComponent :actionTitle="experience.actionTitle" :items="experience.items" />
-    </!--SectionComponent-->
+    </SectionComponent>
   </q-card>
 </template>
