@@ -173,6 +173,11 @@ export default defineComponent({
             value: 70,
           },
           {
+            title: "Delphi 5",
+            icon: "mdi-information",
+            value: 30,
+          },
+          {
             title: "Node",
             icon: "mdi-nodejs",
             value: 55,
@@ -188,6 +193,11 @@ export default defineComponent({
             value: 55,
           },
           {
+            title: "JavaFX",
+            icon: "mdi-information",
+            value: 25,
+          },
+          {
             title: "Vue.js Framework",
             icon: "mdi-vuejs",
             value: 80,
@@ -201,6 +211,11 @@ export default defineComponent({
             title: "React Framework",
             icon: "mdi-react",
             value: 25,
+          },
+          {
+            title: "Thymeleaf",
+            icon: "mdi-information",
+            value: 85,
           },
           {
             title: "HTML5",
@@ -274,14 +289,29 @@ export default defineComponent({
             value: 60,
           },
           {
+            title: "Maven",
+            icon: "mdi-information",
+            value: 60,
+          },
+          {
+            title: "NPM",
+            icon: "mdi-information",
+            value: 55,
+          },
+          {
+            title: "ActiveMQ",
+            icon: "mdi-information",
+            value: 35,
+          },
+          {
             title: "Jenkins",
             icon: "mdi-information",
-            value: 80,
+            value: 75,
           },
           {
             title: "IReport",
             icon: "mdi-information",
-            value: 40,
+            value: 30,
           },
         ],
       };
