@@ -29,6 +29,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import packageInfo from "../../../package.json"
 import { date } from "quasar";
 import AvatarComponent from "components/header/avatar/Avatar.vue";
 import SectionComponent from "components/header/section/Section.vue";
@@ -43,12 +44,21 @@ export default defineComponent({
     HobbyItemComponent,
     LanguageItemComponent,
   },
+  setup() {
+    return {
+      appVersion: packageInfo.version
+    }
+  },
   computed: {
     info() {
       let birthday = new Date(1988, 12, 10);
       let now = Date.now();
       let unit = "years";
       let diff = date.getDateDiff(now, birthday, unit);
+
+      let updateDays = date.getDateDiff(now, date.extractDate(this.appVersion, "YY.MM.DD"), 'days');
+      let updateWas = `${updateDays} ${this.$t('DAYS', (updateDays > 1 ? 0 : 1))}`
+      
       return {
         title: this.$t("HEADER.INFO.TITLE", 1),
         items: [
@@ -67,6 +77,11 @@ export default defineComponent({
             name: this.$t("HEADER.INFO.ADDRESS", 1),
             icon: "mdi-map-marker",
             text: "Itaquaquecetuba, São Paulo",
+          },
+          {
+            name: this.$t("HEADER.INFO.UPDATE_WAS", 1),
+            icon: "mdi-update",
+            text: `${updateWas}`,
           },
         ],
       };

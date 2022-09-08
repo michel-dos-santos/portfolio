@@ -11,7 +11,8 @@ export default {
       TITLE: 'INFO',
       EMAIL: 'Email',
       BIRTHDAY: 'Data de Nascimento',
-      ADDRESS: 'Endereço'
+      ADDRESS: 'Endereço',
+      UPDATE_WAS: 'Atualizado a'
     },
     SOCIALS: {
       TITLE: 'REDES',

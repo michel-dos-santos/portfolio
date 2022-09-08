@@ -21,10 +21,10 @@ export default defineComponent({
   },
   computed: {
     whoAmI() {
-      let schoolEnded = new Date(2014, 11, 10);
+      let startSintel = new Date(2012, 10, 10);
       let now = Date.now();
       let unit = "years";
-      let diff = date.getDateDiff(now, schoolEnded, unit);
+      let diff = date.getDateDiff(now, startSintel, unit);
       return {
         title: this.$t("RESUME.WHO_AM_I.TITLE", 1),
         content: this.$t("RESUME.WHO_AM_I.CONTENT", { diff }),
