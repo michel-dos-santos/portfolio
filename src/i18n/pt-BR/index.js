@@ -61,5 +61,9 @@ export default {
       TITLE: 'EXPERIÊNCIA',
       ACTION_DETAILS: 'Somente detalhes de T.I.'
     }
+  },
+  PORTFOLIO: {
+    TITLE: 'PORTFOLIO',
+    SUB_TITLE: 'em construção',
   }
 }

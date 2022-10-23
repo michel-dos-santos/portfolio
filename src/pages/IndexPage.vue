@@ -14,7 +14,7 @@
 import { defineComponent } from "vue";
 import HeaderComponent from "components/header/Header.vue";
 import ResumeComponent from "components/resume/ResumeComponent.vue";
-import PortfolioComponent from "components/portfolio/Portfolio.vue";
+import PortfolioComponent from "components/portfolio/PortfolioComponent.vue";
 
 export default defineComponent({
   name: "IndexPage",
