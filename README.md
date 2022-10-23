@@ -45,6 +45,6 @@ Click <a href="https://micheldossantos.com" rel="noopener">aqui</a> para ver o r
 - [x] Atualizar icons e texto.
 - [x] Melhorar designer dos cards dos serviços.
 - [x] Adicionar efeito nos cards dos serviços.
-- [ ] Atualizar seção Experiência Profissional.
+- [x] Atualizar seção Experiência Profissional.
 - [ ] Atualizar seção Portfolio.
 
