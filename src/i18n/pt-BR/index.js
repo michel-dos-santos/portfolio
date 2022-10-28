@@ -25,6 +25,7 @@ export default {
       PLAY_GAMES: 'Jogar Games',
       READ_BOOKS: 'Ler Livros',
       LISTEN_MUSIC: 'Ouvir Musica',
+      BODY_BUILDING: 'Musculação',
     },
     LANGUAGES: {
       TITLE: 'IDIOMAS',

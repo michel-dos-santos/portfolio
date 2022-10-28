@@ -131,6 +131,10 @@ export default defineComponent({
             icon: "mdi-playlist-music",
             text: this.$t("HEADER.HOBBIES.LISTEN_MUSIC", 1),
           },
+          {
+            icon: "mdi-weight-lifter",
+            text: this.$t("HEADER.HOBBIES.BODY_BUILDING", 1),
+          },
         ],
       };
     },
