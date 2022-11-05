@@ -16,7 +16,8 @@ export default defineComponent({
         title: this.$t("PORTFOLIO.TITLE", 1),
         subTitle: this.$t("PORTFOLIO.SUB_TITLE", 1),
         items: [
-          { index: 1, imgSrc: 'img/portfolio/the-cat-api.png', title: 'The Cat API', link: 'https://github.com/michel-dos-santos/cat-data-miner' }
+          { index: 1, imgSrc: 'img/portfolio/o-bonus.png', title: 'O Bônus', link: 'https://github.com/michel-dos-santos/bonus_garantido_frontend' },
+          { index: 2, imgSrc: 'img/portfolio/the-cat-api.png', title: 'The Cat API', link: 'https://github.com/michel-dos-santos/cat-data-miner' }
         ]
       }
     }
