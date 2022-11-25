@@ -329,7 +329,7 @@ export default defineComponent({
               {
                 function: "Arquiteto de software",
                 startDate: "2021/05",
-                endDate: "CURRENTLY",
+                endDate: "2022/11",
                 descriptions: [
                   "Liderar e coordenar as atividades e artefatos técnicos dos projetos (Registro de ativos e Seguros).",
                   "Garantir que a arquitetura contemple os atributos de qualidade.",

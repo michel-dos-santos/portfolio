@@ -97,8 +97,8 @@ export default defineComponent({
           },
           {
             icon: "mdi-linkedin",
-            text: "www.linkedin.com/in/michel-dos-santos-8487634a",
-            link: "https://www.linkedin.com/in/michel-dos-santos-8487634a/",
+            text: "www.linkedin.com/in/michel-dos-santos-silva",
+            link: "https://www.linkedin.com/in/michel-dos-santos-silva/",
           },
         ],
       };
