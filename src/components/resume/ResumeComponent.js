@@ -322,6 +322,18 @@ export default defineComponent({
         actionTitle: this.$t("RESUME.EXPERIENCE.ACTION_DETAILS", 1),
         items: [
           {
+            company: "Itaú Unibanco",
+            location: "Mooca - SP",
+            onlyTI: true,
+            functions: [
+              {
+                function: "Engenheiro de software",
+                startDate: "2022/12",
+                endDate: "CURRENTLY",
+              }
+            ]
+          },
+          {
             company: "Central de Registros CRDC",
             location: "Sé - SP",
             onlyTI: true,
